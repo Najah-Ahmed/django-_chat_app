@@ -1,0 +1,13 @@
+{% extends "core/base.html" %} {% block title %}Front Page {% endblock %}
+{%block content %}
+<div class="p-10 lg:text-6xl text-center">
+  <h1 class="text-3xl lg:text6xl text-white">Django Chat App</h1>
+  {% if request.user.is_authenticated %}
+
+  <p class="text-xl  text-white">
+    Hello {{user.username}}!
+  </p>
+  {% endif %}
+</div>
+
+{%endblock%}

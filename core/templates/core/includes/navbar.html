@@ -1,0 +1,17 @@
+{% extends "core/base.html" %} {% block content %}
+<nav class="flex items-center justify-between px-6 py-6 bg-teal-800">
+  <div>
+    <a href="{% url 'index'%}" class="text-3xl text-white">DjangoChat </a>
+  </div>
+  <div class="flex items-center space-x-4">
+    <a href="{% url 'index'%}" class=" text-xl text-white hover:text-gray-200"
+      >Login
+    </a>
+    <a
+      href="{% url 'index'%}"
+      class="px-5 py-3 rounded-xl  text-xl text-white bg-teal-600 hover:bg-teal-700"
+      >SingUp
+    </a>
+  </div>
+</nav>
+{% endblock %}

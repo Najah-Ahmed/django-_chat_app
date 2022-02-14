@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    "channels",
+    # "channels",
     "core",
 ]
 
@@ -70,7 +70,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'django_chat.wsgi.application'
-ASGI_APPLICATION = 'django_chat.asgi.application'
+# ASGI_APPLICATION = 'django_chat.asgi.application'
 
 
 # Database
@@ -124,3 +124,8 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGOUT_REDIRECT_URL='/'
+LOGIN_REDIRECT_URL='/'
+# LOGIN_REDIRECT_URL='/rooms/'
+LOGIN_URL='/login/'

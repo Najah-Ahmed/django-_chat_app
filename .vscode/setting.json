@@ -1,0 +1,11 @@
+{
+  "python.language.server": "pylance",
+  "python.pythonPath": "/Users/njh/.local/share/virtualenvs/django_chat_app-f5LZftN9/bin/python",
+  "files.associations": {
+    "**/*.html": "html",
+    "**/templates/**/*.html": "django-html",
+    "**/templates/**/*": "django-txt",
+    "**/requirements{/**,*}.{txt,in}": "pip-requirements"
+  },
+  "emmet.includeLanguages": { "django-html": "html" }
+}

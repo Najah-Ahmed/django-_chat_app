@@ -4,10 +4,40 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Django channels</title>
+    <title>{% block title %}{% endblock %}| Django channels</title>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    <h1>Django Chat App</h1>
+  <body class="bg-teal-600">
+    <nav class="flex items-center justify-between px-6 py-6 bg-teal-800">
+      <div>
+        <a href="{% url 'frontpage'%}" class="text-3xl text-white"
+          >DjangoChat
+        </a>
+      </div>
+      <div class="flex items-center space-x-4">
+        {% if request.user.is_authenticated %}
+        <a href="rooms" class="  text-white hover:text-gray-200">Rooms </a>
+        <a
+          href="{% url 'logout'%}"
+          class=" px-5 py-3 rounded-xl text-xl text-white bg-teal-600 hover:bg-teal-700
+"
+          >Logout
+        </a>
+        {%else %}
+
+        <a
+          href="{% url 'login'%}"
+          class=" text-xl text-white hover:text-gray-200"
+          >Login
+        </a>
+        <a
+          href="{% url 'signup'%}"
+          class="px-5 py-3 rounded-xl  text-xl text-white bg-teal-600 hover:bg-teal-700"
+          >SingUp
+        </a>
+        {%endif %}
+      </div>
+    </nav>
+    {% block content%} } {% endblock%}
   </body>
 </html>
